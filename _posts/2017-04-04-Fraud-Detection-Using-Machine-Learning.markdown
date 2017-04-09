@@ -817,7 +817,7 @@ sns.pairplot(data=data_df, vars=["total_payments", "exercised_stock_options", "r
 
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_30_1.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_30_1.png)
 
 
 There are two datapoints far away from the cluster of the rest. I will use the *Total Payments* to find them.
@@ -858,7 +858,7 @@ sns.pairplot(data=data_df, vars=["total_payments", "exercised_stock_options", "r
 
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_35_1.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_35_1.png)
 
 
 With the "TOTAL" removed the scatter plots are much more uncluttered and we can see some trends on them.  
@@ -1089,7 +1089,7 @@ plt.show()
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_44_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_44_0.png)
 
 
 We can see that there are some persons with zero salary or bonus (or both) and none of them is a POI. Since we have a sparse number of POIs it might be beneficial to remove them to have a more dense dataset. I will create a copy of the dataset with the specific persons removed for future evaluation.
@@ -1407,7 +1407,7 @@ plot_importance(data)
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_71_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_71_0.png)
 
 
 Comparing the newly created features with the original we can see that the proportions of "Long Term Incentive", "Restricted Stock Deferred" and "From This Person to POI" score higher than the original features. We will keep these and remove the original values. to avoid bias the model towards a specific feature by using both the original value and its proportion.
@@ -1434,7 +1434,7 @@ plot_importance(data_df)
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_74_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_74_0.png)
 
 
 ## Feature Selection
@@ -1494,7 +1494,7 @@ grid.best_estimator_
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_78_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_78_0.png)
 
 
 
@@ -1604,7 +1604,7 @@ grid.best_estimator_
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_86_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_86_0.png)
 
 
 
@@ -1808,7 +1808,7 @@ plt.show()
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_99_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_99_0.png)
 
 
 ### Nearest Neighbors
@@ -2130,7 +2130,7 @@ fig.savefig('Figures/nearest_centroid.png')
 ```
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_121_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_121_0.png)
 
 
 Nearest Centroid Classifier achieved an even better f1 score (0.44) with an average Precision and an excellent Recall.
@@ -2172,7 +2172,7 @@ fig1
 
 
 
-![png](/assets/Fraud-Detection-Using-Machine-Learning/output_130_0.png)
+![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_130_0.png)
 
 
 
