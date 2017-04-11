@@ -1,12 +1,10 @@
 ---
 title: Investigating a Dataset
 date: 2016-10-01 01:00:00 +03:00
-categories:
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Jupyter notebook
+header:
+  overlay_image: https://www.newsroom24bd.org/images/cms-image-000006011.jpg
+  overlay_filter: 0.5
+excerpt: "Exploring information from passengers and crew on board the Titanic to identify the factors that affected survival rate."
 tags:
 - Python
 - NumPy
@@ -17,14 +15,15 @@ description: Posed a question about a dataset, then used NumPy and Pandas to ans
   that question based on the data and created a report to share the results.
 comments: true
 share: true
-layout: post
+layout: single
 ---
 
-![](http://www.rmg.co.uk/sites/default/files/styles/banner/public/Atlantic%20liner%20'Titanic'%20(Br,%201912)%20sinking,%20bow%20first,%201912,%20with%20eight%20full%20lifeboats%20nearby%20and%20an%20iceberg%20in%20the%20distance_banner.jpg?itok=YAl_aQ6_)
+{% include toc %}
 
 # Introduction
 
 The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.
+
 
 One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.
 
@@ -105,7 +104,7 @@ titanic_original.head()
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -316,7 +315,7 @@ df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -409,8 +408,9 @@ titanic_df["Sex"].unique()
 
 The *Sex* column contains the expected values.  
   
----  
-  ### Age
+---
+
+### Age
 
 
 ```python
@@ -428,7 +428,7 @@ df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -473,7 +473,7 @@ df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -518,7 +518,7 @@ df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -563,7 +563,7 @@ df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -611,7 +611,7 @@ titanic_df[titanic_df["Fare"] == 0]
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -920,7 +920,7 @@ cabin.dropna(subset=[1,2])
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1004,7 +1004,7 @@ titanic_df.loc[[27, 88, 341, 438]]
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1128,7 +1128,7 @@ titanic_df.corr()
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1276,7 +1276,7 @@ pclass_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1361,7 +1361,7 @@ plt.show()
 ```
 
 
-![png](output_61_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_61_0.png)
 
 
 It is obvious that the "higher" (smaller number) the Passenger's Class, the higher the Survival Rate.  
@@ -1383,7 +1383,7 @@ sex_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1459,7 +1459,7 @@ plt.show()
 ```
 
 
-![png](output_66_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_66_0.png)
 
 
 The Women had over 4 times the Survival Rate of the men.  
@@ -1502,7 +1502,7 @@ decade_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1632,7 +1632,7 @@ plt.show()
 ```
 
 
-![png](output_72_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_72_0.png)
 
 
 In the above graphs, we can notice some extreme values to the right end of the scale (70: 0%, 80: 100%).
@@ -1647,7 +1647,7 @@ dec_df.loc[dec_df["Decade"] >= 70]
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1863,7 +1863,7 @@ decade_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1991,7 +1991,7 @@ plt.show()
 ```
 
 
-![png](output_77_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_77_0.png)
 
 
 From the above results, we can conclude that the Age was a crucial factor for the survival of the passengers with the children under 15 having the greatest probability to survive.  
@@ -2052,7 +2052,7 @@ plt.show()
 ```
 
 
-![png](output_80_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_80_0.png)
 
 
 There is a patern in the plot but as we saw earlier, there is a negative correlation between *Number of Siblings/Spouses* and *Age*.  
@@ -2112,7 +2112,7 @@ plt.show()
 ```
 
 
-![png](output_82_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_82_0.png)
 
 
 This negative corelation between the *Passenger's Age* and the *Number of Siblings/Spouses* can be further highlighted in the following plot.
@@ -2131,7 +2131,7 @@ plt.show()
 ```
 
 
-![png](output_84_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_84_0.png)
 
 
 ## Survival Rate per Number of Parents/Children Aboard
@@ -2181,7 +2181,7 @@ plt.show()
 ```
 
 
-![png](output_87_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_87_0.png)
 
 
 The above diagram cannot give a clear picture of a correlation between the *Number of Parents/Children* and the Survival rate. We can say though that the passengers that were traveling with 1 to 3 Parents/Children had a greater Survival Ratio.
@@ -2219,7 +2219,7 @@ plt.show()
 ```
 
 
-![png](output_91_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_91_0.png)
 
 
 And if we remove the 300+ fare outliers:
@@ -2255,7 +2255,7 @@ plt.show()
 ```
 
 
-![png](output_93_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_93_0.png)
 
 
 As we expected, the *Fare* was a critical Survival Factor.
@@ -2307,7 +2307,7 @@ plt.show()
 ```
 
 
-![png](output_98_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_98_0.png)
 
 
 There are significant variations between the three ports.  
@@ -2351,7 +2351,7 @@ plt.show()
 ```
 
 
-![png](output_100_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_100_0.png)
 
 
 The port with the higher Survival Rate is the one with the most higher ratio of "prestigious" passengers and a good female/male ratio and the one with the lowest Rate the "worst" ratio in both categories. This explain the significant differences between the three ports.
@@ -2373,7 +2373,7 @@ sex_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2415,7 +2415,7 @@ plt.show()
 ```
 
 
-![png](output_106_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_106_0.png)
 
 
 ...the "Upper Class" nearly 3 times more chances than the "Lower Class" (63.0% against 24.2%)...
@@ -2428,7 +2428,7 @@ pclass_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2476,7 +2476,7 @@ plt.show()
 ```
 
 
-![png](output_109_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_109_0.png)
 
 
 ...and coming to the age factor, the most privileged were the infants (ages under 5) with a Survival Rate of 67.5%, almost double the average.
@@ -2489,7 +2489,7 @@ decade_df
 
 
 
-<div>
+<div class="table">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2567,7 +2567,7 @@ plt.show()
 ```
 
 
-![png](output_112_0.png)
+![png](/assets/2016-10-01-Investigating-a-Dataset/output_112_0.png)
 
 
 The above conclusions are tentative and further statistical analysis is required in order to prove their validity.

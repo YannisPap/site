@@ -1,35 +1,27 @@
 ---
 title: Wrangle OpenStreetMap Data
 date: 2017-01-01 00:00:00 +02:00
-categories:
-- Python
-- Data verification
-- Data Cleaning
+header:
+  overlay_image: https://www.strath.ac.uk/media/1newwebsite/departmentsubject/business/internationalcentres/singapore.jpg
+  overlay_filter: 0.5
 tags:
 - Python
 - Data verification
 - Data cleaning
-- Jupyter notebook
-- SQL
-description: Chose a region and used data munging techniques to assess the quality
-  of the data for validity, accuracy, completeness, consistency and uniformity.
+excerpt: Deployed data munging techniques to assess the quality of OpenStreetMap’s (OSM) for the center of Singapore regarding their consistency and uniformity.
 comments: true
 share: true
-layout: post
+layout: single
 ---
 
-**Note: This is a brief report of the Project. Please find the main Project [here](https://github.com/YannisPap/Wrangle-OpenStreetMap-Data/blob/master/Wrangle-OpenStreetMap-Data.md).**
-
----
-
-![Singapore](http://www.mytraveldesk.in/holidays1/backup/images/pkg/international/Singapore-MTD-IS107.jpg)
+{% include toc %}
 
 # Introduction
 
 On the particular project, I am using data mungling techniques to assess the quality of OpenStreetMap's (OSM) data for the center of Singapore regarding their consistency and uniformity.
 The data wrangling takes place programmatically, using **Python** for the most of the process and **SQL** for items that need further attention while in the **PostgreSQL**.
 
-## The Dataset
+# The Dataset
 
 The dataset describes the center of Singapore, covering an area from Clementi on the west, to Bedok on the east and from Serangoon on the north, to Sentosa Island on the south.
 The size of the dataset is 96 MB and can can be downloaded from [here](http://overpass-api.de/api/map?bbox=103.7651,1.2369,103.9310,1.3539).

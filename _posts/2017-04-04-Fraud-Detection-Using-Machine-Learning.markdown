@@ -1,55 +1,33 @@
 ---
-layout: post
-title:  "Fraud Detection Using Machine Learning"
+layout: single
+header:
+  overlay_image: /assets/Fraud-Detection-Using-Machine-Learning/banner.jpg
+  overlay_filter: 0.5
+  caption: "Photo credit: [**Impawards**](http://www.impawards.com/)"
+title:  "Fraud Detection Using Machine Learning (Analysis)"
+excerpt: "Identified which employees are more likely to have committed fraud by applying machine learning to financial and email data."
 date:   2017-04-04 15:26:52 +0300
-categories: ML, Python
+tags:
+- Python
+- Scikit-learn
+- Machine learning
+- Natural language processing
+- Feature selection
+- Verifying machine learning performance
 ---
 
-![banner]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/banner.jpg)
+{% include toc %}
 
-# Project Overview
+# Introduction
 
-## Scope
-
-In 2000, Enron was one of the largest companies in the United States. By 2002, it had collapsed into bankruptcy due to widespread corporate fraud. In the resulting Federal investigation, a significant amount of typically confidential information entered into the public record, including tens of thousands of emails and detailed financial data for top executives.  
+In 2000, Enron was one of the largest companies in the United States. By 2002, it had collapsed into bankruptcy due to widespread corporate fraud. In the resulting Federal investigation, a significant amount of typically confidential information entered into the public record, including tens of thousands of emails and detailed financial data for top executives.
 These data have been combined with a hand-generated list of persons of interest in the fraud case, which means individuals who were indicted, reached a settlement or plea deal with the government, or testified in exchange for prosecution immunity.  
 
 In this project, I am building **a person of interest identifier based on financial and email data**, made public as a result of the Enron scandal.  
 
 The data have been combined in the form of a dictionary, where each key-value pair in the dictionary corresponds to one person. The dictionary key is the person's name, and the value is another dictionary, which contains the names of all the features and their values for that person.
 
-## Needed Libraries
-
-
-```python
-%matplotlib inline
-
-import sys
-sys.path.append("./code/")
-
-from matplotlib.colors import ListedColormap
-import matplotlib.patches as mpatches
-import matplotlib.pyplot as plt
-
-import numpy as np
-import pandas as pd
-import pickle
-import seaborn as sns
-import re
-
-from sklearn.decomposition import PCA
-from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
-from sklearn.feature_selection import SelectPercentile, SelectKBest
-from sklearn.model_selection import GridSearchCV, StratifiedShuffleSplit
-from sklearn.neighbors import KNeighborsClassifier, NearestCentroid
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import MaxAbsScaler, StandardScaler
-from sklearn.svm import LinearSVC, SVC
-
-from tester import test_classifier
-import warnings
-```
-
+# The Dataset
 ## Features
 
 The features included in the dataset can be divided in three categories, Salary Features, Stock Features and Email Features. Bellow you may find the full feature list with  brief definition of each one.
@@ -95,14 +73,40 @@ The features included in the dataset can be divided in three categories, Salary 
 | ***shared receipt with poi*** | Number of emails addressed by someone else to a POI where this person was CC. |  
 
 ***
-<br><br>
-# Understanding the Dataset
 
 ## Data Exploration
 
 
 ```python
-### Load the dictionary containing the dataset
+#Importing libraries and magics
+%matplotlib inline
+
+import sys
+sys.path.append("./code/")
+
+from matplotlib.colors import ListedColormap
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+
+import numpy as np
+import pandas as pd
+import pickle
+import seaborn as sns
+import re
+
+from sklearn.decomposition import PCA
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
+from sklearn.feature_selection import SelectPercentile, SelectKBest
+from sklearn.model_selection import GridSearchCV, StratifiedShuffleSplit
+from sklearn.neighbors import KNeighborsClassifier, NearestCentroid
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import MaxAbsScaler, StandardScaler
+from sklearn.svm import LinearSVC, SVC
+
+from tester import test_classifier
+import warnings
+
+# Load the dictionary containing the dataset
 with open("./dataset/final_project_dataset.pkl", "rb") as data_file:
     data_init = pickle.load(data_file)
 
@@ -110,14 +114,8 @@ with open("./dataset/final_project_dataset.pkl", "rb") as data_file:
 data_df = pd.DataFrame.from_dict(data_init, orient='index')
 data_df.shape
 ```
-
-
-
-
     (146, 21)
-
-
-
+```
 
 ```python
 data_df.head()
@@ -817,7 +815,7 @@ sns.pairplot(data=data_df, vars=["total_payments", "exercised_stock_options", "r
 
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_30_1.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/output_30_1.png)
 
 
 There are two datapoints far away from the cluster of the rest. I will use the *Total Payments* to find them.
@@ -858,7 +856,7 @@ sns.pairplot(data=data_df, vars=["total_payments", "exercised_stock_options", "r
 
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_35_1.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/output_35_1.png)
 
 
 With the "TOTAL" removed the scatter plots are much more uncluttered and we can see some trends on them.  
@@ -1089,7 +1087,7 @@ plt.show()
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_44_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/stock_to_payments.png)
 
 
 We can see that there are some persons with zero salary or bonus (or both) and none of them is a POI. Since we have a sparse number of POIs it might be beneficial to remove them to have a more dense dataset. I will create a copy of the dataset with the specific persons removed for future evaluation.
@@ -1407,7 +1405,7 @@ plot_importance(data)
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_71_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/features_importance.png)
 
 
 Comparing the newly created features with the original we can see that the proportions of "Long Term Incentive", "Restricted Stock Deferred" and "From This Person to POI" score higher than the original features. We will keep these and remove the original values. to avoid bias the model towards a specific feature by using both the original value and its proportion.
@@ -1434,7 +1432,7 @@ plot_importance(data_df)
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_74_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/features_importance2.png)
 
 
 ## Feature Selection
@@ -1494,7 +1492,7 @@ grid.best_estimator_
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_78_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/feature_reduction.png)
 
 
 
@@ -1604,7 +1602,7 @@ grid.best_estimator_
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_86_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/output_86_0.png)
 
 
 
@@ -1808,7 +1806,7 @@ plt.show()
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_99_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/svc.png)
 
 
 ### Nearest Neighbors
@@ -2130,7 +2128,7 @@ fig.savefig('Figures/nearest_centroid.png')
 ```
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_121_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/nearest_centroid.png)
 
 
 Nearest Centroid Classifier achieved an even better f1 score (0.44) with an average Precision and an excellent Recall.
@@ -2172,7 +2170,7 @@ fig1
 
 
 
-![png]({{ site.url }}/assets/Fraud-Detection-Using-Machine-Learning/output_130_0.png)
+![png]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/stock_to_payments.png)
 
 
 
