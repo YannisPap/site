@@ -82,7 +82,7 @@ author:
   bio              : "Former Project Manager \n Aspired Data Analyst \n Lifelong Learner"
   location         : Athens, Greece
   email            : yannis@yannispappas.com
-  uri              :
+  uri              : yannispappas.com
   bitbucket        :
   codepen          :
   dribbble         :
@@ -90,7 +90,7 @@ author:
   facebook         :
   foursquare       :
   github           : YannisPap
-  google_plus      :
+  google_plus      : 100510409251523649476
   keybase          :
   instagram        :
   lastfm           :
@@ -241,6 +241,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
