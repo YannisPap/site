@@ -406,3 +406,10 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/*
+   Changed default alignment of contents
+   ========================================================================== */
+.page__content {
+  text-align: justify;
+}
