@@ -2191,5 +2191,7 @@ Actually, this is so sensible that we could say that it is always true and thus 
 (*of course this score isn't exact because the algorithm selection and evaluation process should be followed again with the dataset without the zero Payments / Stocks employees*)
 
 So, I'm leaving for a future improvement the creation of a custom classifier that would classify as non-POI every employee with zero Payments or Stocks and by using a machine learning algorithm for the rest.
+
 ***
+
 The second one is the usage of the content of the emails on the classification. Currently, I just used aggregated values from email headers in the form of the "emails features. Using NLP to dig into the actual content of the emails and vectorize them, may improve the classification further.
