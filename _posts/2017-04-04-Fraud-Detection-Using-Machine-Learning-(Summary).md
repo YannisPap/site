@@ -6,7 +6,7 @@ header:
   caption: "Photo credit: [**Impawards**](http://www.impawards.com/)"
   teaser: https://blog.ordoro.com/wp-content/uploads/2012/07/fraud.jpg
 title:  "Fraud Detection Using Machine Learning (Summary)"
-excerpt: "Identified which employees are more likely to have committed fraud by applying machine learning to financial and email data."
+excerpt: "Identify which employees are more likely to have committed fraud by applying machine learning to financial and email data."
 date:   2017-04-04 15:26:53 +0300
 tags:
 - Python

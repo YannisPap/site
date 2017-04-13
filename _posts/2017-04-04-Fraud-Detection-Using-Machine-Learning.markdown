@@ -6,7 +6,7 @@ header:
   overlay_filter: 0.5
   caption: "Photo credit: [**Impawards**](http://www.impawards.com/)"
 title:  "Fraud Detection Using Machine Learning (Analysis)"
-excerpt: "Identified which employees are more likely to have committed fraud by applying machine learning to financial and email data."
+excerpt: "Identify which employees are more likely to have committed fraud by applying machine learning to financial and email data."
 date:   2017-04-04 15:26:52 +0300
 tags:
 - Python
