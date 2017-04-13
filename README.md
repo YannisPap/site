@@ -1,1 +1,1 @@
-This ia a personal website hosted by github, based on [minimal mistakes theme](https://github.com/mmistakes/minimal-mistakes)
+This ia a personal website hosted by github, based on ["Minimal Mistakes" Jekyll Theme](https://github.com/mmistakes/minimal-mistakes)
