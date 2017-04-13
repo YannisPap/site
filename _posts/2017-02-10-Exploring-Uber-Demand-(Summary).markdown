@@ -3,9 +3,10 @@ title: Exploring Uber demand in NYC (Summary)
 date: 2017-02-10 20:10:01 +02:00
 excerpt: "Exploring ridership of New York's boroughs and creating a set of prediction models."
 header:
-  overlay_image: /assets/2017-02-10-Exploring-Uber-Demand/banner.jpg
+  overlay_image: https://media.timeout.com/images/103444978/image.jpg
   overlay_filter: 0.5
-  caption: "Photo credit: [**City Journal**](https://www.city-journal.org)"
+  caption: "Photo credit: [**Timeout**](https://www.timeout.com)"
+  teaser: https://media.timeout.com/images/103444978/image.jpg
 tags:
 - RStudio
 - R packages

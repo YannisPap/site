@@ -6,6 +6,7 @@ header:
   overlay_image: /assets/2017-02-10-Exploring-Uber-Demand/banner.jpg
   overlay_filter: 0.5
   caption: "Photo credit: [**City Journal**](https://www.city-journal.org)"
+  teaser: /assets/2017-02-10-Exploring-Uber-Demand/banner.jpg
 tags:
 - RStudio
 - R packages

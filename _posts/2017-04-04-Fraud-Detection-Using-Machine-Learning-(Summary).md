@@ -4,6 +4,7 @@ header:
   overlay_image: /assets/Fraud-Detection-Using-Machine-Learning/banner.jpg
   overlay_filter: 0.5
   caption: "Photo credit: [**Impawards**](http://www.impawards.com/)"
+  teaser: https://blog.ordoro.com/wp-content/uploads/2012/07/fraud.jpg
 title:  "Fraud Detection Using Machine Learning (Summary)"
 excerpt: "Identified which employees are more likely to have committed fraud by applying machine learning to financial and email data."
 date:   2017-04-04 15:26:53 +0300
@@ -98,7 +99,7 @@ The missing values were actually "0" and they imputed accordingly.
 
 These data have created an initial dataset of 20 features for 146 employees.
 
-During the process the following outliers were revealed probably as a result of the extraction from the [Payments Schedule](dataset/enron61702insiderpay.pdf):
+During the process the following outliers were revealed probably as a result of the extraction from the [Payments Schedule]({{ site.url }}/assets/enron61702insiderpay.pdf):
 
 * a datapoint named '*TOTAL*' matching the totals row from the Schedule
 * a datapoint named "*THE TRAVEL AGENCY IN THE PARK*" which was not representing an employee

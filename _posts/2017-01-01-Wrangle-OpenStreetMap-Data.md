@@ -4,6 +4,7 @@ date: 2017-01-01 00:00:00 +02:00
 header:
   overlay_image: https://www.strath.ac.uk/media/1newwebsite/departmentsubject/business/internationalcentres/singapore.jpg
   overlay_filter: 0.5
+  teaser: http://www.fourseasons.com/content/dam/fourseasons_magazine/SIN/marina-bay-sunset-singapore-1000x563.jpg
 tags:
 - Python
 - Data verification

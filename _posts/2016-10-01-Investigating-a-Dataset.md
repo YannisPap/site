@@ -3,6 +3,7 @@ title: Investigating a Dataset
 date: 2016-10-01 01:00:00 +03:00
 header:
   overlay_image: https://www.newsroom24bd.org/images/cms-image-000006011.jpg
+  teaser: https://www.newsroom24bd.org/images/cms-image-000006011.jpg
   overlay_filter: 0.5
 excerpt: "Exploring information from passengers and crew on board the Titanic to identify the factors that affected survival rate."
 tags:

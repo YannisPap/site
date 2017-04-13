@@ -2,6 +2,7 @@
 layout: single
 header:
   overlay_image: /assets/Fraud-Detection-Using-Machine-Learning/banner.jpg
+  teaser: http://images4.static-bluray.com/reviews/759_5.jpg
   overlay_filter: 0.5
   caption: "Photo credit: [**Impawards**](http://www.impawards.com/)"
 title:  "Fraud Detection Using Machine Learning (Analysis)"
@@ -325,7 +326,7 @@ data_df.count().sort_values()
 We can see that the dataset is quite sparse with some variables like *Total Payments* and *Total Stock Value* having values for most of the employees but some others like *Loan Advances* and *Director Fees* that we have information for too few employees.  
 I am wondering if there are any records for all missing values. For this I will remove the *email_address* field since we cannot use it somehow in the analysis and I will create a temporary copy without the label (POI).
 
-By paying attention to the [Payments Schedule](dataset/enron61702insiderpay.pdf) which is the source of the dataset, we can see that the empty values, except the *email_address*, are actually "0". After cleaning the dataset I will impute the empty values with "0". For now, I will remove the *email_address* field since we cannot use it somehow in the analysis.
+By paying attention to the [Payments Schedule]({{ site.url }}/assets/enron61702insiderpay.pdf) which is the source of the dataset, we can see that the empty values, except the *email_address*, are actually "0". After cleaning the dataset I will impute the empty values with "0". For now, I will remove the *email_address* field since we cannot use it somehow in the analysis.
 
 
 ```python
@@ -834,7 +835,7 @@ data_df.total_payments.nlargest(2)
 
 
 
-The first one 'TOTAL', is the totals on the [Payments Schedule](dataset/enron61702insiderpay.pdf) and not a person so it should be removed.  
+The first one 'TOTAL', is the totals on the [Payments Schedule]({{ site.url }}/assets/enron61702insiderpay.pdf) and not a person so it should be removed.  
 The second one is not an outlier, it is just the huge payment and stock value of the CEO and chairman of Enron, Kenneth Lay. Datapoints like this are not outliers; in fact anomalies like this may lead us to the rest of the POIs. 
 These extreme values lead the rest of the employees to the bottom left corner of the scatterplot. Let's use a logarithmic scale for both axes to unclutter the plot.
 
@@ -996,7 +997,7 @@ data_df.loc[alist]
 
 
 
-Comparing the above results with the [Payments Schedule](dataset/enron61702insiderpay.pdf) we can see that there are some errors in the data.  
+Comparing the above results with the [Payments Schedule]({{ site.url }}/assets/enron61702insiderpay.pdf) we can see that there are some errors in the data.  
 The right values are:
 
 <div class="table">

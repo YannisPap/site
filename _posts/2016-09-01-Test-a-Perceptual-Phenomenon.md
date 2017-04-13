@@ -3,6 +3,7 @@ title: Test a Perceptual Phenomenon
 date: 2016-09-01 01:00:00 +03:00
 header:
   overlay_image: https://images6.alphacoders.com/405/405735.jpg
+  teaser: https://images6.alphacoders.com/405/405735.jpg
   overlay_filter: 0.5
   caption: "Photo credit: [**Webneel**](http://webneel.com)"
 excerpt: "Analyzed the Stroop effect using descriptive statistics to provide an intuition about the data, and inferential statistics to draw a conclusion based on the results."
