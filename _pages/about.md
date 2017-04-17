@@ -47,7 +47,7 @@ Hi I'm Yannis, an experienced Project Manager, an aspired Data Analyst and a Lif
 ## Work Experience
 
 ### Niometrics - Senior Project Manager | Data Analytics  
-*Singapore | November 2015 - January 2016*  
+*Singapore | November 2015 - January 2017*
 
 * Conducted requirement analysis meetings, and data mapping sessions to understand business needs.  
 * Coordinated data analysis, design, and information flow, of ad-hoc reports to the customers.  
