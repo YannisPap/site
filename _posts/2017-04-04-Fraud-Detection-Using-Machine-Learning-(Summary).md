@@ -99,7 +99,7 @@ The missing values were actually "0" and they imputed accordingly.
 
 These data have created an initial dataset of 20 features for 146 employees.
 
-During the process the following outliers were revealed probably as a result of the extraction from the [Payments Schedule]({{ site.url }}/assets/enron61702insiderpay.pdf):
+During the process the following outliers were revealed probably as a result of the extraction from the [Payments Schedule]({{ site.url }}/assets/2017-04-04-Fraud-Detection-Using-Machine-Learning/enron61702insiderpay.pdf):
 
 * a datapoint named '*TOTAL*' matching the totals row from the Schedule
 * a datapoint named "*THE TRAVEL AGENCY IN THE PARK*" which was not representing an employee
