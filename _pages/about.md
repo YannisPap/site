@@ -4,7 +4,7 @@ permalink: "/about/"
 layout: single
 ---
 
-Hi I'm Yannis, an experienced Project Manager, an aspired Data Analyst and a Lifelong Learner.
+Hi I'm Yannis, an experienced Project Manager, an passioned Data Analyst and a Lifelong Learner.
 
 ## Skills
 
