@@ -1,5 +1,5 @@
 ---
-title: Investigating a Dataset
+title: Titanic - Learning from Disaster
 date: 2016-10-01 01:00:00 +03:00
 header:
   overlay_image: https://www.newsroom24bd.org/images/cms-image-000006011.jpg
@@ -17,6 +17,8 @@ description: Posed a question about a dataset, then used NumPy and Pandas to ans
 comments: true
 share: true
 layout: single
+
+redirect_from: "/Investigating-a-Dataset/"
 ---
 
 {% include toc %}
