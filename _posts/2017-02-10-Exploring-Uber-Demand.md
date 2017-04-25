@@ -20,6 +20,8 @@ description:
 comments: true
 share: true
 layout: single
+
+redirect_from: "/2017-02-10/Exploring-Uber-Demand/"
 ---
 
 {% include toc %}
