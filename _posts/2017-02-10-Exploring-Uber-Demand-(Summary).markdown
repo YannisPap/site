@@ -34,13 +34,13 @@ Using the above conclusions I was able to model the demand with forecasting hori
 
 Since the model is based on past observations it is prone to wrong estimations on very irregular conditions. Additionally since current observations affect future prediction, demand out of the ordinary levels may lead to wrong estimation at some point to later predictions.  
 
-Below you may find the final plots of the project. There is also available a [Full analysis](https://yannispap.github.io/Exploring-Uber-Demand/)
+Below you may find the final plots of the project. There is also available a [Full analysis](http://www.yannispappas.com/Exploring-Uber-Demand/)
 
 ***
 
 # Pickups Distribution
 
-![download.png](/assets/2017-02-10-Exploring-Uber-Demand/download.png)
+![download.png]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_One-1.png)
 
 The distribution of the four major boroughs, on a square rooted scale, are mainly normal to bimodal because of the quick rise of the demand during the morning hours.  
 Staten Island's pickups follow a geometric distribution because of the very small demand in the area.  
@@ -50,7 +50,7 @@ Finally, on EWR the demand is practically zero with a very few pickups that we m
 
 # Pickups Heatmap
 
-![plot2.png](/assets/2017-02-10-Exploring-Uber-Demand/plot2.png)
+![plot2.png]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_Two-1.png)
 
 On the above heat maps we can see the demand pattern on each borough.  
 The four major boroughs follow the same pattern both during the day and through the week.  
@@ -61,6 +61,6 @@ On the two minor boroughs, Staten Island's demand looks random during the day bu
 
 # Prediction Results
 
-![plot3.png](/assets/2017-02-10-Exploring-Uber-Demand/plot3.png)
+![plot3.png]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_Three-1.png)
 
 I concluded the Exploratory Data Analysis process with the creation of some models to predict the demand. In general, the models have a very good fit with just one occasion of underestimating the actual demand on the highest day of the six months period.

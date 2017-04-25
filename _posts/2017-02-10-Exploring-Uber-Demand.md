@@ -77,21 +77,21 @@ Univariate Plots Section
 Pickups
 -------
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_histogram-1.png)<!-- -->
 
 The histogram is heavily skewed. I will use a square root scale on both axis to observe the left side more clearly.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20histogram(sqrt)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_histogram(sqrt)-1.png)<!-- -->
 
 This is a quite strange distribution. It looks like a union of normal distributions. I am suspecting that the different boroughs have very discrete distributions.
 Although I am still in the univariate exploration phase I need to see the above histogram on borough level.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20histogram%20pre%20borough(color)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_histogram_per_borough(color)-1.png)<!-- -->
 
 We can see that the majority of 0 pickups is created solely by EWR, Staten Island and from pickup data that we are missing the borough.
 The rest 4 areas seem to have lightly skewed distribution on a squared root scale. I will split the boroughs.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20histogram%20per%20borough(facet)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_histogram_per_borough(facet)-1.png)<!-- -->
 
 The distributions of Staten Island and NA are so identical that make me wonder if they are duplicated data.
 
@@ -110,18 +110,18 @@ Since all boroughs are neighboring, I used weather information from the same wea
 In a more optimized version we may use more localized weather stations but the area is relatively narrow for significant weather differences.
 Additionally, using information from different stations may enter noise by various factors (like missing values or small calibration differences).
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Weather%20histogram(facet)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Weather_histogram(facet)-1.png)<!-- -->
 
 ### Wind Speed
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Wind%20speed%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Wind_speed_histogram-1.png)<!-- -->
 
 The histogram is positively skewed with a Mode of 5 miles/hour, means that most of the time there was a light breeze.
 The speed tops at 21 miles/hour which is not even a strong breeze, though I don't expect significant impact to the ridership.
 
 ### Visibility
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Visibility%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Visibility_histogram-1.png)<!-- -->
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##    0.00    9.10   10.00    8.82   10.00   10.00
@@ -138,7 +138,7 @@ We can also notice some "spikes" denoting (probably) rounding to integer values.
 
 The period of observation is not ideal for examining how temperature affects ridership because the data do not include July which is the hottest month in NYC.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature_histogram-1.png)<!-- -->
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##    2.00   31.50   45.00   47.49   64.00   89.00
@@ -153,7 +153,7 @@ The gap between the modes may be caused by a rapid rising of temperature during 
 
 Thus, dew point is an indication of the humidity.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Dew%20point%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Dew_point_histogram-1.png)<!-- -->
 
 Since dew point is correlated with temperature (by definition) their distributions appears similar.
 
@@ -163,7 +163,7 @@ Since dew point is correlated with temperature (by definition) their distributio
 
 Air pressure affects the weather in a later time, thus there might be a delayed effect in the ridership.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/SLP%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/SLP_histogram-1.png)<!-- -->
 
 Sea level pressure has a normal distribution with mode at 1020 mBars.
 
@@ -172,17 +172,17 @@ Sea level pressure has a normal distribution with mode at 1020 mBars.
 The amount of rain is very possible to affect the demand.
 We have 3 measurements of precipitation, one for the last hour, one for the last 6 hours and one for the last 24 hours.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Precipitation%20histogram(grid)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Precipitation_histogram(grid)-1.png)<!-- -->
 
 We can see how the histogram is transformed by the built up of the values because of the summation, which is more obvious if we use a log10 scale for the X axis.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/unnamed-chunk-1-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Precipitation_histogram(log)-1.png)<!-- -->
 
 ### Snow Depth
 
 Snow depth may also affect ridership.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Snow%20depth%20histogram-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Snow_depth_histogram-1.png)<!-- -->
 
     ## # A tibble: 1 × 1
     ##       n
@@ -248,7 +248,7 @@ The first question we can use bivariate plots to answer is if I should create on
 
 ### Time variables matrix
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Time%20pairs-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Time_pairs-1.png)<!-- -->
 
 From the above pairs we can see that:
 
@@ -261,7 +261,7 @@ In general, ridership in all boroughs except Staten Island and EWR are time depe
 
 ### Weather variables matrix
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Weather%20pairs-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Weather_pairs-1.png)<!-- -->
 
 On the weather part,
 
@@ -272,19 +272,19 @@ We can conclude that there are strong indications that a single model cannot hav
 
 ### Pickups VS datetime
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20datetime-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_datetime-1.png)<!-- -->
 
 Plotting the pickups VS datetime we can see that there is a clear pattern. There are 26 peaks, as many as the number of weeks in the investigated period. Also, there is a general rising of the number of pickups over time which is aligned with the findings of the pair plots.
 
 ### Distribution of pickups per day
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20wday-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_wday-1.png)<!-- -->
 
 There is a pattern also during the week. The demand starts low on Monday and then rises until Saturday when it peaks. On Sunday the demand falls to Wednesday's levels and then we go back to Monday.
 
 ### Pickups VS time of the day
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20hour-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_hour-1.png)<!-- -->
 
 Finally, there is a clear pattern of the ridership on a day level. The traffic starts low at 5 o'clock in the morning, starts rising until 9-10 o'clock in the morning when it hits a plateau. At around 2 o'clock in the afternoon it starts rising again until 8 o'clock in the evening when it hits the daily maximum. Even without the regression line the pattern is clear.
 
@@ -321,7 +321,7 @@ So far, hour of the day seems the strongest criterion for forecasting the riders
 
 ### Working days VS non-working days
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20workday-1.png) ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Brooklyn%20pickups%20VS%20workday-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_workday-1.png)<!-- --> ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Brooklyn_pickups_VS_workday-1.png)<!-- -->
 
     ## [1] 1.357069
 
@@ -330,50 +330,50 @@ This is not the case for Brooklyn where in non-working days there is a 35.71% hi
 
 ### Pickups VS temperature
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20temperature-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_temperature-1.png)<!-- -->
 
 The temperature seems to affect the ridership slightly until 75 degrees but it's effect is relatively strong after 75 degrees.
 I will create a new variable named "over\_75F"
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/unnamed-chunk-2-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/over_75_boxplot-1.png)<!-- -->
 
 Now the correlation is more obvious.
 
 ### Temperature VS datetime
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature%20VS%20datetime-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature_VS_datetime-1.png)<!-- -->
 
 If we plot the temperature over time we can also explain the bi-modal distribution of the temperature. You can notice that there is a zone on 45-50 degrees which is higher than the temperatures of January - March and lower than these of period May - July, creating the gap in the distribution.
 
 ### Dew point VS temperature
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Dew%20point%20VS%20temperature-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Dew_point_VS_temperature-1.png)<!-- -->
 
 Dew point is correlated with the temperature so probably I will use just one of them in my model.
 
 ### Pickups VS wind speed
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20wind%20speed-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_wind_speed-1.png)<!-- -->
 
 There is a slight negative correlation between wind speed and ridership but I don't think it is strong enough to affect the ridership.
 
 ### Pickups VS visibility
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/pickups%20VS%20visibility-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/pickups_VS_visibility-1.png)<!-- -->
 
 ### Pickups VS sea level pressure
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20SLP-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_SLP-1.png)<!-- -->
 
 ### Pickups VS precipitation
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20precipitations(01)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_precipitations(01)-1.png)<!-- -->
 
 Precipitation do not seem to have an effect on ridership. I will investigate it again in the multivariate plot section.
 
 ### Pickups VS snow depth
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups%20VS%20snow%20depth-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Pickups_VS_snow_depth-1.png)<!-- -->
 
 Finally, snow depth does not seem also to affect ridership.
 
@@ -409,15 +409,15 @@ In this section I will finalize the findings that came up on the previous sectio
 
 ### Borough and time of the day
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Borough%20and%20time%20of%20the%20day-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Borough_and_time_of_the_day-1.png)<!-- -->
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Borough%20and%20time%20of%20the%20day(log)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Borough_and_time_of_the_day(log)-1.png)<!-- -->
 
 It is clear that the time of the day and the borough are two of the most significant variables in predicting the ridership. Especially on the second plot where a logarithmic scale has been applied to Y axis, it is obvious that the 4 major boroughs follow the exact same pattern. The same applies to Staten Island but the values are much more disperse and I expect a higher degree of errors if we apply the same model. Finally EWR seems to have a random demand with the majority of the values being zero with a few 1s and 2s. It seems not feasible, and probably there is no need, to model the demand of this area.
 
 ### Day and time of the day
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Day%20and%20time%20of%20the%20day-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Day_and_time_of_the_day-1.png)<!-- -->
 
 In the above heat map we can see the ridership through the week.
 We can see the same pattern through the week with the demand rising from Monday onward, especially in the afternoon/evening hours and peaking on Saturday.
@@ -425,15 +425,15 @@ We can also notice a transposition of the demand during Saturday and Sunday for 
 
 ### Working VS non-working days
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working%20VS%20non-working%20days-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working_VS_non-working_days-1.png)<!-- -->
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working%20VS%20non-working%20days%20per%20major%20borough-1.png) ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working%20VS%20non-working%20days(boxplot)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working_VS_non-working_days_per_major_borough-1.png)<!-- --> ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Working_VS_non-working_days(boxplot)-1.png)<!-- -->
 
 Non-working days change the ridership pattern through the day but they do not have a significant effect on the day's total demand.
 
 ### Temperature and rain
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature%20and%20rain(temperature)-1.png) ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature%20and%20rain(rain)-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature_and_rain(temperature)-1.png)<!-- --> ![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Temperature_and_rain(rain)-1.png)<!-- -->
 
 Against our intuition, neither temperature nor rain play any significant role on the ridership. Even that we noticed a positive correlation between demand and temperature on higher temperatures, most probably it is because these temperatures are taking place during high demand hours (after 15:00).
 
@@ -583,7 +583,7 @@ The full model applied to a single borough can explain 95% of the variance.
 
 We can check visually the consistency of the models by using a residual plot.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Residual%20plot-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Residual_plot-1.png)<!-- -->
 
 We can see that the 'm1' model underestimates somehow the demand with predicted values being up to 6000 pickups per hour lower than the demand.
 Once we enter the lag variables the residual is getting into balance and it starts falling from under 2000 to under 500.
@@ -591,15 +591,15 @@ In general we have well balanced residuals (except m1) which is a strong indicat
 
 Now, I will apply the models to the week data that I kept for testing.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting%20models-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting_models-1.png)<!-- -->
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting%20models%20per%20day-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting_models_per_day-1.png)<!-- -->
 
 In general terms, all the models but the 'General' have a very good fit on the actual data. Surprisingly the Weekly prediction model has better fit in some occasions, for instance on Sunday night, Wednesday night, and Friday night.
 As the forecasting horizon is getting shorter the model has an advantage on adapting to changes in the demand from the usual pattern like on Tuesday evening or Saturday after 15:00.
 I cannot leave without mentioning the big underestimation of the model by a magnitude of 1,500 pickups during Saturday evening/nigh. Let's plot the specific day against all other Manhattan's data.
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting%20Saturday%20June%2027-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plotting_Saturday_June_27-1.png)<!-- -->
 
 We can see that it was a very irregular day with pickups reaching after 15:00 the maximum of all 6 months .
 
@@ -637,7 +637,7 @@ Final Plots and Summary
 
 ### Pickups Distribution
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot%20One-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_One-1.png)<!-- -->
 
 The distribution of the four major boroughs, on a square rooted scale, are mainly normal to bimodal because of the quick rise of the demand during the morning hours.
 Staten Island's pickups follow a geometric distribution because of the very small demand in the area.
@@ -645,7 +645,7 @@ Finally, on EWR the demand is practically zero with a very few pickups that we m
 
 ### Pickups Heatmap
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot%20Two-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_Two-1.png)<!-- -->
 
 On the above heat maps we can see the demand pattern on each borough.
 The four major boroughs follow the same pattern both during the day and through the week. On working days the demand falls after midnight and then at around 6 o'clock start rising quickly, then it hits a plateau during the afternoon and start rises again during the evening/night. On the X axis (during the week), the demand starts low on Monday and then rises until Saturday, when it tops and then on Sunday stars falling again. The pattern is more obvious on Manhattan and Brooklyn.
@@ -653,7 +653,7 @@ On the two minor boroughs, Staten Island's demand looks random during the day bu
 
 ### Prediction Results
 
-![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot%20Three-1.png)
+![]({{ site.url }}/assets/2017-02-10-Exploring-Uber-Demand/Plot_Three-1.png)<!-- -->
 
     ## # A tibble: 6 × 2
     ##                model `r-squared`
@@ -661,7 +661,7 @@ On the two minor boroughs, Staten Island's demand looks random during the day bu
     ## 1 2 Hours Prediction   0.8512615
     ## 2 3 Hours Prediction   0.7839258
     ## 3                 1w   0.7376149
-    ## 4   Dayly Prediction   0.7305335
+    ## 4   Daily Prediction   0.7305335
     ## 5  Weekly Prediction   0.7259510
     ## 6 General Predection   0.4176351
 
