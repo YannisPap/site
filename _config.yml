@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Just Another Data Science Blog"
+title                    : "We Love Data"
 title_separator          : "-"
 name                     : "Yannis Pappas"
 description              : "Statistics, Visualising, Python, NumPy, Pandas, Matplotlib, Jupyter notebook, Data cleaning, RStudio, Exploratory data analysis, Scikit-learn, Machine learning"

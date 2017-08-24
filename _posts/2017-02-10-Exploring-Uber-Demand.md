@@ -36,8 +36,6 @@ For the exploration I have prepared a dataset by merging data that intuitively s
 -   LocationID to Borough mapping. (by [FiveThirtyEight](https://github.com/fivethirtyeight/uber-tlc-foil-response/blob/master/uber-trip-data/taxi-zone-lookup.csv))
 -   NYC public holidays.
 
-The wrangling is described in detail in [Wrangling UBER NYC data]()
-
 The main dataset contained over 10 million observations of 4 variables which aggregated per hour and borough, and then joined with the rest of the datasets producing 29,101 observations across 13 variables. These are:
 
 -   pickup\_dt: Time period of the observations.

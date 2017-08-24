@@ -132,11 +132,12 @@ As a database I used PostgreSQL to present a generic solution although a lightwe
 
 ## Addresses
 
-And for the rest of them I had to search in Google/Google Maps for finding addresses from amenity names.
-
 The small number of the elements that were requiring further attention (13) allow me to examine them one by one. There were three categories of problems.  
+
 In the first category belong elements that some values have been placed to wrong attributes (e.g. housenumber in the place of postcode. These problems resolved just by checking the attributes and update the relevant tables with the right keys/values relation.  
+
 Incomplete addresses with no self-explained errors belong to the second category. For these elements I defined a function that uses Google Maps API to resolve the full address from a partial address. This was helpful for the addresses with missing postcodes.  
+
 Finally, whatever could not be resolved with one of the above ways I used web search with any information available.
 
 You may find the changes that took place during this phase in the following table.

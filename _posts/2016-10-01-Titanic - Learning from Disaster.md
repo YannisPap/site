@@ -867,7 +867,7 @@ titanic_df[titanic_df["Fare"] == 0]
 
 There are some obvious similarities.  
 All of them were males, embarked in Southampton and only one survived.  
-The above facts make them look like crew members but further investigation to https://www.encyclopedia-titanica.org/ reveals that they were not.  
+The above facts make them look like crew members but further investigation to [Encyclopedia Titanica](https://www.encyclopedia-titanica.org/) reveals that they were not.  
 Instead, it seems that they had some relation with the White Star Line, owner of RMS Titanic.  
 
 For example,  
@@ -1121,7 +1121,7 @@ According to the above findings, no problematic data found, thus there isn't any
 # Data Exploration
 
 In the current section we will investigate the correlation of several factors with the Survival Rate.  
-An initial investigation can be made between the non-categorical data by using the *pandas.DataFrame.corr()* function.
+An initial investigation can be made between the non-categorical data by computing a pairwise correlation of the columns.
 
 
 ```python
@@ -1371,7 +1371,7 @@ It is obvious that the "higher" (smaller number) the Passenger's Class, the high
 
 ## Survival Rate per Passenger's Gender
 
-*"Women and children first" is a code of conduct whereby the lives of women and children are to be saved first in a life-threatening situation, typically abandoning ship, when survival resources such as lifeboats were limited*. (Source: https://en.wikipedia.org/wiki/Women_and_children_first)  
+*"Women and children first" is a code of conduct whereby the lives of women and children are to be saved first in a life-threatening situation, typically abandoning ship, when survival resources such as lifeboats were limited*. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Women_and_children_first))  
   
 Let's see if the women on Titanic had a higher Survival Rate than the men.
 
@@ -2576,8 +2576,7 @@ plt.show()
 The above conclusions are tentative and further statistical analysis is required in order to prove their validity.
 
 # References
-Udacity - https://www.udacity.com/  
-Encyclopedia Titanica - https://www.encyclopedia-titanica.org  
-Wikipedia - https://en.wikipedia.org
+[Encyclopedia Titanica](https://www.encyclopedia-titanica.org)  
+[Wikipedia](https://en.wikipedia.org)
 
-**Dataset**: https://d17h27t6h515a5.cloudfront.net/topher/2016/September/57e9a84c_titanic-data/titanic-data.csv
+**Dataset**: [Kaggle - Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic/data)
